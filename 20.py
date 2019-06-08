@@ -2,9 +2,9 @@ import datetime
 def printTimeStamp(name):
     print('Автор програми: ' + name)
     print('Час компіляції: ' + str(datetime.datetime.now()))
-C = int(input("Градуси: "))
-K = C + 273,15
-F = C*9/5 + 32
-print("Кельвіни: ", K)
-print("Фаренгейти", F)
-printTimeStamp("Денис")
+
+
+for i in range(10):
+    print ("  "*(10-i-1) + "*"*(2*i+1))
+for i in range(10-1,-1,-1):
+    print ('  '*(10-i-1) + "*"*(2*i+1))

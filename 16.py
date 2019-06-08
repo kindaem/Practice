@@ -1,10 +1,8 @@
 import datetime
+from math import pi
 def printTimeStamp(name):
     print('Автор програми: ' + name)
     print('Час компіляції: ' + str(datetime.datetime.now()))
-C = int(input("Градуси: "))
-K = C + 273,15
-F = C*9/5 + 32
-print("Кельвіни: ", K)
-print("Фаренгейти", F)
+r = int(input("Радіус: "))
+print("Об'єм:", (4/3)*pi*r**3, "Площа: ", 4*pi*r**2)
 printTimeStamp("Денис")
