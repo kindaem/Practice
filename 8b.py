@@ -1,20 +1,16 @@
 import datetime
-import math
 def printTimeStamp(name):
     print('Автор програми: ' + name)
     print('Час компіляції: ' + str(datetime.datetime.now()))
-l = []
-while True:
-    s = (input("Символ адреси: "))
-    l.append(s)
-    if s == "":
-        break
-l.pop()
-if len(l) < 6 or len(l) > 7:
-    print("Wrong address")
-else:
-    if (l[1]) and (l[2]) and (l[3]) and (l[4]) is int:
-        print("New type of address")
+def precedence(a):
+    if a=="+"or a == "-":
+        return 1
+    elif a=="/"or a == "*":
+        return 2
+    elif a=="^":
+        return 3
     else:
-        print("old type")
-printTimeStamp("Денис")
+        return -1
+if __name__ == "__main__":
+    print(precedence(input("Символ: ")))
+    printTimeStamp("Доброштан і Глигало")

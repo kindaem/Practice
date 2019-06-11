@@ -1,12 +1,16 @@
 import datetime
-import math
 def printTimeStamp(name):
     print('Автор програми: ' + name)
     print('Час компіляції: ' + str(datetime.datetime.now()))
-t1 = int(input("t1: "))
-g1 = int(input("g1: "))
-t2 = int(input("t2: "))
-g2 = int(input("g2: "))
-l = 6371.01*math.acos(math.radians(math.sin(math.radians(t1))*math.sin(math.radians(t2)) + math.cos(math.radians(t1))*math.cos(math.radians(t2))*math.cos(math.radians(g1 - g2))))
-print(l)
-printTimeStamp("Денис")
+ip = input("IPv4: ")
+if len(ip) <= 6 or len(ip) >= 16:
+    print("Помилочка")
+else:
+    l = list(ip.split("."))
+    for i in l:
+        if int(i) < 0 or int(i) > 255:
+            print("Невірна адреса IPv4")
+        else:
+            pass
+    print("All good")
+printTimeStamp("Доброштан і Глигало")
