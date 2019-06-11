@@ -1,13 +1,19 @@
 import datetime
-import math
 def printTimeStamp(name):
     print('Автор програми: ' + name)
     print('Час компіляції: ' + str(datetime.datetime.now()))
-Money = int(input("Здача: "))
-m5 = Money // 500
-m2 = (Money - ((Money // 500)*500))//200
-m1 = ((Money - ((Money // 500)*500))-(((Money - ((Money // 500)*500))//200)*200))//100
-m50 = (((Money - ((Money // 500)*500))-(((Money - ((Money // 500)*500))//200)*200)) - ((((Money - ((Money // 500)*500))-(((Money - ((Money // 500)*500))//200)*200))//100)*100))//50
-m25 = ((((Money - ((Money // 500)*500))-(((Money - ((Money // 500)*500))//200)*200)) - ((((Money - ((Money // 500)*500))-(((Money - ((Money // 500)*500))//200)*200))//100)*100))-(((((Money - ((Money // 500)*500))-(((Money - ((Money // 500)*500))//200)*200)) - ((((Money - ((Money // 500)*500))-(((Money - ((Money // 500)*500))//200)*200))//100)*100))//50)*50))//25
-print("Здача: ",m5 , "по 5 грн",m2 , "по 2 грн",m1 , "по 1 грн",m50 , "по 50 коп",m25 , "по 25 коп")
-printTimeStamp("Денис")
+score = {"a": 1 , "b": 3 , "c": 3 , "d": 2 ,
+         "e": 1 , "f": 4 , "g": 2 , "h": 4 ,
+         "i": 1 , "j": 8 , "k": 5 , "l": 1 ,
+         "m": 3 , "n": 1 , "o": 1 , "p": 3 ,
+         "q": 10, "r": 1 , "s": 1 , "t": 1 ,
+         "u": 1 , "v": 4 , "w": 4 , "x": 8 ,
+         "y": 4 , "z": 10}
+def Scrable(a):
+    start = 0
+    for i in a:
+        i = i.lower()
+        start = start + score[i]
+    return start
+print(Scrable(a = input("Введить свое слово: ")))
+printTimeStamp("Доброштан і Глигало")
