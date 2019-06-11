@@ -2,22 +2,10 @@ import datetime
 def printTimeStamp(name):
     print('Автор програми: ' + name)
     print('Час компіляції: ' + str(datetime.datetime.now()))
-l = []
-while True:
-    s = input("Число: ")
-    if s == "":
-        break
-    s = int(s)
-    l.append(s)
-cr = sum(l) / len(l)
-l1 = []
-l2 = []
-for i in l:
-    if i < cr:
-        l1.append(i)
-    else:
-        l2.append(i)
-print(l1)
-print(l2)
-print(cr)
+def catalan(n):
+    if n >= 2:
+        c = ((2 * ((2*n) - 1)) / (n+1)) * catalan(n-1)
+        return int(c)
+    return 1
+print(catalan(n = int(input("n: "))))
 printTimeStamp("Доброштан і Глигало")

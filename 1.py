@@ -2,21 +2,12 @@ import datetime
 def printTimeStamp(name):
     print('Автор програми: ' + name)
     print('Час компіляції: ' + str(datetime.datetime.now()))
-l = []
-while True:
-    s = input("Ціле додатнє число: ")
-    if s == "":
-        break
-    elif int(s) <= 0:
-        print("Ціле додатнє!")
-        break
-    else:
-        l.append(int(s))
-if len(l) < 6:
-    print("Помилочка")
-else:
-    for  i in range(3):
-        l.remove(max(l))
-        l.remove(min(l))
-print(l)
+def gcd(x,y):
+    if (x == y):
+        return y
+    if (x < y):
+        return gcd(x, y-x)
+    if (x > y):
+        return gcd(x-y, y)
+print(gcd(x=int(input("x: ")), y=int(input("y: "))))
 printTimeStamp("Доброштан і Глигало")
